@@ -1,0 +1,105 @@
+h1, h2, h3, h4{
+    font-family: $font-family-title;
+    line-height: 1;
+    font-weight: 400;
+    color: $color-black;
+}
+
+h2, h3, h4{
+    margin-bottom: remToPx(10px);
+}
+
+h1{
+    font-size: remToPx(46px);
+    margin-bottom: remToPx(55px);
+    line-height: remToPx(55px);
+}
+
+h2{
+    color: $color-green;
+    font-size: remToPx(32px);
+    margin-bottom: remToPx(10px);
+}
+
+h3{
+    font-size: remToPx(26px);
+    color: $color-green; 
+}
+
+h4{
+    font-size: remToPx(22px);
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+.text-container {
+    max-width: remToPx(700px);
+    p, ul, ol,
+    blockquote,
+    .embed-container,
+    .wp-caption {
+        line-height: remToPx(24px);
+        margin-bottom: remToPx(24px);
+        max-width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul, ol {
+        position: relative;
+        list-style: none;
+
+        li:not(.gfield) {
+            padding-left: 1.25em;
+
+            &::before {
+                position: absolute;
+                text-indent: -1.25em;
+            }
+        }
+    }
+
+    ul {
+        li:not(.gfield) {
+            &::before {
+                content: '•';
+            }
+        }
+    }
+
+    ol {
+        counter-reset: ol-counter;
+
+        li {
+            counter-increment: ol-counter;
+
+            &::before {
+                content: counter(ol-counter) '.';
+            }
+        }
+    }
+
+    a{
+        &:not(.btn){
+            &:hover{
+                color: $color-black;
+            }    
+        }
+        
+    }
+
+    blockquote {
+        padding-left: 1em;
+        font-size: 1.4em;
+        line-height: 1.2;
+        border-left: .1rem solid currentColor;
+    }
+}

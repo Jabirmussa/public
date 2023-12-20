@@ -1,0 +1,16 @@
+{
+    "name": "acf/body",
+    "title": "Body",
+    "description": "A custom block.",
+    "style": [ "" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["body", "text"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "render.php",
+        "postTypes": ["page", "post"]
+    },
+    "render_callback": "my_acf_block_render_callback",
+    "align": "full"
+}

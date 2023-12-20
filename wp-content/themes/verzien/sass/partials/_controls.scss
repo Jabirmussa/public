@@ -1,0 +1,62 @@
+%control-properties {
+    transition: padding 0.3s ease-in-out;
+    position: relative;
+    font-family: $font-family-title;
+    font-size: remToPx(17px);
+    display: inline-block;
+    background: $color-black;
+    color: $color-white;
+    padding: remToPx(10px) remToPx(20px);
+    text-decoration: none;
+    border-radius: 0;
+    line-height: 1;
+    overflow: hidden;
+}
+
+%focus-properties {
+    color: $color-white;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+.btn {
+    transition: all 0.2s ease-in-out;
+    @extend %control-properties;
+    &:hover{
+        @extend %focus-properties;
+    }
+}
+
+form{
+    position: relative;
+    max-width: remToPx(700px);
+    input[type=text]{
+        background: $color-white;
+        height: remToPx(60px);
+        padding: remToPx(20px) remToPx(30px);
+        border-radius: remToPx(30px);
+        @include placeholder{
+            color: rgba($color-black, 0.6);
+            font-weight: 400;
+        }
+    }
+    input[type=submit]{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $color-black;
+        height: remToPx(60px);
+        border-radius: remToPx(30px);
+        color: $color-white;
+        font-weight: 800;
+        padding: 0 remToPx(30px);
+        text-transform: uppercase;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+#site-container .gform_wrapper {}

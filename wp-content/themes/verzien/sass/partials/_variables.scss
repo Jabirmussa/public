@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "GardenGrown";
+    src: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');
+  }
+
+
+$html-font-size: 16px;
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+$color-orange:#D95A0D;
+$color-green: #3E7531;
+
+// Fonts
+$font-family-default: 'Neucha', cursive;
+$font-family-title: 'GardenGrown', sans-serif;

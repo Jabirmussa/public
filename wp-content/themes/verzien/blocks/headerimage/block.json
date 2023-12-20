@@ -1,0 +1,16 @@
+{
+    "name": "acf/headerimage",
+    "title": "Headerimage",
+    "description": "A custom block.",
+    "style": [ "" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["header", "image"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "render.php",
+        "postTypes": ["page", "post"]
+    },
+    "render_callback": "my_acf_block_render_callback",
+    "align": "full"
+}

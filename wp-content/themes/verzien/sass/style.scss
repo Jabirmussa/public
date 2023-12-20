@@ -1,0 +1,24 @@
+/*!
+Theme Name: verzien
+Author: GrowSkills
+Author URI: https://growskills.nl/
+Description: Template verzien
+Text Domain: verzien
+Version: 1
+*/
+@use 'sass:math';
+@import 'partials/defaults';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/breakpoints';
+@import 'partials/base';
+@import 'partials/type';
+@import 'partials/controls';
+
+// @import 'vendor/tiny-slider';
+//@import 'vendor/glightbox';
+
+@import 'partials/header';
+@import 'partials/content';
+@import 'partials/menus';
+@import 'partials/footer';

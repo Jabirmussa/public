@@ -1,0 +1,43 @@
+header{
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: remToPx(10px) 0 0;
+    height: remToPx(60px);
+
+    @include breakpoint-desktop-small{
+        height: auto;
+    }
+    
+    .wrapper{
+        @include breakpoint-desktop-small{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: end;
+        }
+    }
+    
+    
+    &.fixed{
+        background: $color-orange;
+        padding-bottom: remToPx(10px);
+    }
+}
+
+.header-logo{
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: remToPx(80px);
+    @include breakpoint-desktop-small{
+        width: remToPx(100px);
+    }
+    .fixed & {
+        width: remToPx(80px);
+    }
+}

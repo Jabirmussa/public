@@ -1,0 +1,27 @@
+footer{
+    position: relative;
+    background: $color-black;
+    padding: remToPx(30px) 0;
+    @include breakpoint-tablet{
+        padding: remToPx(64px) 0;
+    }
+    @include breakpoint-desktop-small{
+        padding: remToPx(120px) 0;
+    }
+
+    .wrapper{
+        @include grid-layout(12, remToPx(30px), remToPx(30px));
+        div{
+            @include grid-column-span(12);
+            @include breakpoint-tablet{
+                @include grid-column-span(6);
+            }
+            li{
+                padding-left: 0!important;
+            }
+        }
+        h2, h3, h4, p, a{
+            color: $color-white;
+        }
+    }
+}
