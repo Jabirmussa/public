@@ -103,3 +103,29 @@ em {
         border-left: .1rem solid currentColor;
     }
 }
+
+.body-text {
+    h3 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 30px;
+        @include breakpoint-tablet {
+            font-size: 50px;
+        }
+        @include breakpoint-desktop-medium {
+            font-size: 70px;
+        }
+    }
+    a{
+        font-family: $font-family-default;
+    }
+    p {
+        font-family: 'Neucha', cursive;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 30px;
+        color: $color-orange;
+    }
+}

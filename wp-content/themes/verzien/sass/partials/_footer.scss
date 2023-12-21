@@ -8,7 +8,6 @@ footer{
     @include breakpoint-desktop-small{
         padding: remToPx(120px) 0;
     }
-
     .wrapper{
         @include grid-layout(12, remToPx(30px), remToPx(30px));
         div{

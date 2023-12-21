@@ -1,7 +1,7 @@
 %control-properties {
     transition: padding 0.3s ease-in-out;
     position: relative;
-    font-family: $font-family-title;
+    font-family: font-family-default;
     font-size: remToPx(17px);
     display: inline-block;
     background: $color-black;
@@ -26,6 +26,16 @@
     @extend %control-properties;
     &:hover{
         @extend %focus-properties;
+    }
+}
+.btn {
+    background-color: #3E7531;
+    padding: 16px 36px;
+    border-radius: 0 30px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+    width: 150px;
     }
 }
 

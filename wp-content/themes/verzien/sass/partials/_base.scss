@@ -55,20 +55,6 @@ body{
         width: calc(100% - 8rem);
     }
 }
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    .body-text {
-        padding: 50px;
-        grid-column: span 12;
-    }
-
-    @include breakpoint-desktop-medium {
-        gap: 30px;
-        grid-column: 1 / span 10;
-
-    }
-}
 
 .with-margin {
     margin: 2rem 0;

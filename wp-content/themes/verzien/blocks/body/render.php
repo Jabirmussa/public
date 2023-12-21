@@ -5,7 +5,7 @@ $button = get_field('button');
 
 if($show_title || !empty($body)) : ?>
     <section class="body">
-        <div class="wrapper grid">
+        <div class="wrapper with-margin">
             <div class="body-text">
                 <?= $body; ?>
                 <?= ($button ? '<a class="btn" href="'. $button['url'] .'">'. $button['title'] .'</a>' : null); ?>

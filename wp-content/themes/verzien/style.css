@@ -196,21 +196,6 @@ body {
   }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-.grid .body-text {
-  padding: 50px;
-  grid-column: span 12;
-}
-@media (min-width: 80rem) {
-  .grid {
-    gap: 30px;
-    grid-column: 1/span 10;
-  }
-}
-
 .with-margin {
   margin: 2rem 0;
 }
@@ -339,10 +324,38 @@ em {
   border-left: 0.1rem solid currentColor;
 }
 
+.body-text h3 {
+  font-size: 36px;
+}
+.body-text h2 {
+  font-size: 30px;
+}
+@media (min-width: 48rem) {
+  .body-text h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 80rem) {
+  .body-text h2 {
+    font-size: 70px;
+  }
+}
+.body-text a {
+  font-family: "Neucha", cursive;
+}
+.body-text p {
+  font-family: "Neucha", cursive;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #D95A0D;
+}
+
 .btn {
   transition: padding 0.3s ease-in-out;
   position: relative;
-  font-family: "GardenGrown", sans-serif;
+  font-family: font-family-default;
   font-size: 1.0625rem;
   display: inline-block;
   background: #000;
@@ -365,6 +378,17 @@ em {
 .btn {
   transition: all 0.2s ease-in-out;
 }
+.btn {
+  background-color: #3E7531;
+  padding: 16px 36px;
+  border-radius: 0 30px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  width: 150px;
+}
+
 form {
   position: relative;
   max-width: 43.75rem;
@@ -547,43 +571,37 @@ header.fixed {
 }
 
 .body {
+  margin: 30px 0 30px 0px;
+  padding: 30px 0 30px 30px;
+}
+.body .wrapper {
+  width: 80%;
   background-color: #fff;
-  border-radius: 0 100px;
-  margin: 70px;
+  border-radius: 0 60px;
+  margin-bottom: 40px;
+  padding: 30px;
 }
-.body .body-text h3 {
-  font-size: 36px;
-}
-.body .body-text h2 {
-  font-size: 30px;
+@media (min-width: 60rem) {
+  .body .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem 2rem;
+    gap: 2rem 2rem;
+  }
 }
 @media (min-width: 48rem) {
-  .body .body-text h2 {
-    font-size: 50px;
+  .body .wrapper {
+    border-radius: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 30px 30px;
+    gap: 30px 30px;
   }
 }
-@media (min-width: 80rem) {
-  .body .body-text h2 {
-    font-size: 70px;
-  }
-}
-.body .body-text p {
-  font-family: "Neucha", cursive;
-  font-size: 22px;
-  line-height: 30px;
-  text-align: left;
-  margin-bottom: 30px;
-  color: #D95A0D;
-}
-.body .btn {
-  background-color: #3E7531;
-  padding: 13px 33px;
-  border-radius: 0 30px;
-  border: none;
-  cursor: pointer;
-}
-.body .btn:hover {
-  width: 200px;
+.body .body-text {
+  grid-column-end: span 10;
+  grid-column-start: 2;
+  padding: 50px 0;
 }
 
 .menu-is-open #content-container {
